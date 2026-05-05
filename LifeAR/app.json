@@ -1,0 +1,75 @@
+{
+  "expo": {
+    "name": "LifeAR",
+    "slug": "lifear",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/adaptive-icon.png",
+    "userInterfaceStyle": "dark",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#DC2626"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.lifear.app",
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "Used for emergency assistance.",
+        "NSCameraUsageDescription": "LifeAR uses your camera to display AR first aid guides on the patient.",
+        "NSMicrophoneUsageDescription": "LifeAR uses microphone for emergency audio guidance.",
+        "NSPhotoLibraryUsageDescription": "LifeAR needs access to your photos to set a profile picture.",
+        "NSPhotoLibraryAddUsageDescription": "LifeAR needs access to save profile pictures."
+      },
+      "privacyManifests": {
+        "NSPrivacyCollectedDataTypes": [
+          {
+            "NSPrivacyCollectedDataType": "NSPrivacyCollectedDataTypeCrashData",
+            "NSPrivacyCollectedDataTypeLinked": false,
+            "NSPrivacyCollectedDataTypeTracking": false,
+            "NSPrivacyCollectedDataTypePurposes": [
+              "NSPrivacyCollectedDataTypePurposeAppFunctionality"
+            ]
+          }
+        ]
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#DC2626"
+      },
+      "package": "com.lifear.app",
+      "permissions": [
+        "android.permission.CAMERA",
+        "android.permission.RECORD_AUDIO",
+        "android.permission.VIBRATE",
+        "android.permission.CALL_PHONE",
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.WRITE_EXTERNAL_STORAGE"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "LifeAR uses your camera to display AR first aid guides on the patient.",
+          "microphonePermission": "LifeAR uses microphone for emergency audio guidance."
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "LifeAR needs access to your photos to set a profile picture.",
+          "cameraPermission": "LifeAR needs access to your camera to take a profile picture."
+        }
+      ]
+    ]
+  }
+}
